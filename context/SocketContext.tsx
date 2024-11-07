@@ -20,7 +20,7 @@ const STATEFUL_SERVER = process.env.STATEFULL_SERVER || "";
 
 // Provide the context hook
 export const useSocket = () => {
-  console.log(STATEFUL_SERVER);
+  alert(STATEFUL_SERVER);
   return useContext(SocketContext);
 };
 
