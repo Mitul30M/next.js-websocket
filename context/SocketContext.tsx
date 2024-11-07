@@ -34,6 +34,7 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   // Only initialize the socket connection on button press
   const connectSocket = () => {
     if (!socket.current && userDB_id) {
+      console.log(STATEFUL_SERVER);
       setIsConnecting(true); // Set connecting state to true
       socket.current = io(STATEFUL_SERVER, {
         withCredentials: true,
