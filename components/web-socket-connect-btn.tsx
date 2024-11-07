@@ -16,7 +16,10 @@ const WebSocketConnect = () => {
             <Unplug />
             Establish WebSocket
           </Button>
-          <Badge variant="secondary">Connect Backend Stateful Server</Badge>
+          <Badge variant="secondary">
+            Connect Backend Stateful Server
+            {process.env.NEXT_PUBLIC_STATEFULL_SERVER}
+          </Badge>
         </>
       )}
 
