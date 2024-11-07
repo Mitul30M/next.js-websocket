@@ -37,13 +37,10 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
     if (!socket.current && userDB_id) {
       console.log(STATEFUL_SERVER);
       setIsConnecting(true); // Set connecting state to true
-      socket.current = io(
-        "https://backend-server-for-next-js-websocket.onrender.com",
-        {
-          withCredentials: true,
-          query: { userId: userDB_id },
-        }
-      );
+      socket.current = io(STATEFUL_SERVER, {
+        withCredentials: true,
+        query: { userId: userDB_id },
+      });
 
       socket.current.on("connect", () => {
         console.log("Connected to Socket Server");
