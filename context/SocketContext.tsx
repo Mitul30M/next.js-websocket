@@ -16,7 +16,7 @@ interface SocketContextType {
 
 const SocketContext = createContext<SocketContextType | null>(null); // Update context type to match our needs
 
-const STATEFUL_SERVER = process.env.STATEFULL_SERVER || "http://localhost:4000";
+const STATEFUL_SERVER = process.env.STATEFULL_SERVER || "";
 
 // Provide the context hook
 export const useSocket = () => {
