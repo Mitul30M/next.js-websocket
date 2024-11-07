@@ -1,4 +1,3 @@
-import { PrismaClient } from "@prisma/client";
 import crypto from "crypto";
 import prisma from "./prisma-client";
 

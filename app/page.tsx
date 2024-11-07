@@ -8,7 +8,6 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { SignOutButton } from "../components/SignOutButton";
-import { PlugZap, Terminal } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import Link from "next/link";
 import { auth } from "@clerk/nextjs/server";
@@ -16,11 +15,7 @@ import {
   LockKeyhole,
   LockKeyholeOpen,
   LogIn,
-  LogOut,
-  ShieldCheck,
-  Unplug,
 } from "lucide-react";
-import Image from "next/image";
 
 export default async function Home() {
   const { userId } = await auth();

@@ -1,12 +1,11 @@
 "use client";
 import { useSocket } from "@/context/SocketContext";
 import { Loader, Unplug } from "lucide-react";
-import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { BroadcastMessageInput } from "./broadcast-msg-input";
 
 const WebSocketConnect = () => {
-  const { socket, connectSocket, disconnectSocket, isConnected, isConnecting } =
+  const { connectSocket, disconnectSocket, isConnected, isConnecting } =
     useSocket()!;
 
   return (
