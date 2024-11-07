@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 const WebSocketConnect = () => {
   const { connectSocket, disconnectSocket, isConnected, isConnecting } =
     useSocket()!;
-  const backendServerURL = process.env.STATEFULL_SERVER;
   return (
     <div className="flex flex-col gap-6 items-center justify-center w-full">
       {!isConnected && !isConnecting && (
@@ -17,9 +16,7 @@ const WebSocketConnect = () => {
             <Unplug />
             Establish WebSocket
           </Button>
-          <Badge variant="secondary">
-            Backend Stateful Server: {backendServerURL}
-          </Badge>
+          <Badge variant="secondary">Connect Backend Stateful Server</Badge>
         </>
       )}
 

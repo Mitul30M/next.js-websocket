@@ -16,7 +16,7 @@ interface SocketContextType {
 
 const SocketContext = createContext<SocketContextType | null>(null); // Update context type to match our needs
 
-const STATEFUL_SERVER = process.env.STATEFULL_SERVER;
+const STATEFUL_SERVER = process.env.NEXT_PUBLIC_STATEFULL_SERVER ;
 
 // Provide the context hook
 export const useSocket = () => {
