@@ -3,18 +3,24 @@ import { useSocket } from "@/context/SocketContext";
 import { Loader, Unplug } from "lucide-react";
 import { Button } from "./ui/button";
 import { BroadcastMessageInput } from "./broadcast-msg-input";
+import { Badge } from "@/components/ui/badge";
 
 const WebSocketConnect = () => {
   const { connectSocket, disconnectSocket, isConnected, isConnecting } =
     useSocket()!;
-
+  const backendServerURL = process.env.STATEFULL_SERVER;
   return (
     <div className="flex flex-col gap-6 items-center justify-center w-full">
       {!isConnected && !isConnecting && (
-        <Button variant="outline" onClick={connectSocket} className="w-max">
-          <Unplug />
-          Establish WebSocket
-        </Button>
+        <>
+          <Button variant="outline" onClick={connectSocket} className="w-max">
+            <Unplug />
+            Establish WebSocket
+          </Button>
+          <Badge variant="secondary">
+            Backend Stateful Server: {backendServerURL}
+          </Badge>
+        </>
       )}
 
       {isConnecting && (
