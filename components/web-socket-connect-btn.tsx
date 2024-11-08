@@ -17,7 +17,7 @@ const WebSocketConnect = () => {
             Establish WebSocket
           </Button>
           <Badge variant="secondary">
-            Connect Backend Stateful Server
+            Connect to Backend Stateful Server:{" "}
             {process.env.NEXT_PUBLIC_STATEFULL_SERVER}
           </Badge>
         </>
