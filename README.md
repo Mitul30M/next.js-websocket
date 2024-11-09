@@ -2,6 +2,7 @@
 
 This is a real-time web application built with [Next.js](https://nextjs.org/), utilizing WebSockets for live updates and [Clerk](https://clerk.com/) for authentication. The frontend is deployed on Vercel, while the backend (Express server) [Backend Repository](https://github.com/Mitul30M/Backend-Server-for-Next.js-WebSocket-application) is deployed on Render.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world)
 
 ![Group 1 (12)](https://github.com/user-attachments/assets/90d0aded-300b-4c54-8460-6f0829dd673c)
 
